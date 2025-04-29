@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fbd1c5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #cc0000;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #cc0000;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid #cc0000;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #cc0000;
+  color: white;
+}
+
+nav ul li a:visited {
+  color: #990000;
+}
+
+main {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-grid,
+.sponsors-grid,
+.testimonials-grid,
+.team,
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.gallery-row,
+.sponsors-grid,
+.testimonials-grid,
+.team,
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.testimonials-grid,
+.team,
+.about {
+  justify-content: center;
+}
+
+.gallery-item,
+.sponsor,
+.testimonial-card,
+.member {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  border: 3px solid red;
+  padding: 10px;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+  border-color: darkred;
+}
+
+.about img.centered-img {
+  width: 350px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
+
+header h1::after,
+main h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: red;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid darkred;
+  outline: none;
+}
+
+button:active {
+  background-color: darkred;
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-row,
+  .sponsors-grid,
+  .testimonials-grid,
+  .team,
+  .about {
+    flex-wrap: wrap;
+  }
+
+  img {
+    width: 150px;
+  }
+
+  .about img.centered-img {
+    width: 250px;
+  }
+}
